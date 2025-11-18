@@ -9,6 +9,17 @@ cask "jaybar" do
 
   app "jaybar.app"
 
+  postflight do
+    system_command "#{appdir}/jaybar.app/Contents/MacOS/jaybar",
+                   args: ["--enable-service"]
+  end
+
+  uninstall_postflight do
+    system_command "launchctl",
+                   args: ["unload", "#{Dir.home}/Library/LaunchAgents/com.jaybar.plist"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/LaunchAgents/com.jaybar.plist",
   ]
