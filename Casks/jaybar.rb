@@ -1,6 +1,6 @@
 cask "jaybar" do
-  version "1.0.0"
-  sha256 "REPLACE_WITH_ACTUAL_SHA256"
+  version "1.1.7"
+  sha256 "5fa003e0afceb716a45ab18b0894b96cb9fc2568606e0f296f2a51f3d70cb6ad"
 
   url "https://github.com/SubiqT/jaybar/releases/download/v#{version}/jaybar-#{version}-macos.zip"
   name "jaybar"
