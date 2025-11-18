@@ -12,6 +12,8 @@ cask "jaybar" do
   postflight do
     system_command "#{appdir}/jaybar.app/Contents/MacOS/jaybar",
                    args: ["--enable-service"]
+    system_command "#{appdir}/jaybar.app/Contents/MacOS/jaybar",
+                   args: ["--start-service"]
   end
 
   uninstall_postflight do
